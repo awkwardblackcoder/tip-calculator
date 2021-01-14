@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="tip-calculator-container">
+        <h1>Tip Calculator</h1>
+        <section id="input-error-section"></section>
+        <section id="bill-amount-section">
+          <label for="bill-amount"><h3>How Much Was Your Bill?</h3></label>
+          <input type="number" min="10" name="" id="bill-amount" required />
+        </section>
+        <section id="amount-of-people-section">
+          <label for="amount-of-people"
+            ><h3>How Many People Sharing the Bill?</h3></label
+          >
+          <input type="number" min="1" name="" id="amount-of-people" required />
+        </section>
+        <section id="service-review-section">
+          <label for="service-review"><h3>How Was Your Service?</h3></label>
+          <select name="" id="service-review" required>
+            <option value="0">Choose..</option>
+            <option value="1">Great - 20%</option>
+            <option value="2">Good - 10%</option>
+            <option value="3">Bad - 5%</option>
+          </select>
+        </section>
+        <button type="submit" id="calculate-bill">
+          Calculate
+        </button>
+        <section id="loading">
+          <div id="loader"><img src="./images/Ajax-loader.gif" alt="" /></div>
+          <label>Calculating amount...</label>
+        </section>
+        <section id="bill-breakdown">
+          <p>Tip Amount: <span id="tip-amount"></span></p>
+          <p>Total Amount: <span id="total-amount"></span></p>
+            <p>Amount Owed Per Person: <span id="amount-per-person"></span></p>
+        </section>
+        <script src="./script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
